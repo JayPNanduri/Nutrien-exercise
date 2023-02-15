@@ -20,14 +20,14 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nutrien-exercise
+      app: nutrien-gke
   template:
     metadata:
       labels:
-        app: nutrien-exercise
+        app: nutrien-gke
     spec:
       containers:
-        - name: nutrien-exercise
+        - name: nutrien-gke
           # Replace $LOCATION with your Artifact Registry location (e.g., us-west1).
           # Replace $GCLOUD_PROJECT with your project ID.
           image:  us-east1-docker.pkg.dev/nutrien-exercise/nutrient-artifacts-repo/nutrien-gke:latest
