@@ -1,0 +1,5 @@
+commonLabels:
+  app: nutrien-exercise
+resources:
+  - deployment.yaml
+  - service.yaml
