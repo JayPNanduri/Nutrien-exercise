@@ -19,3 +19,26 @@ npm install
 ```
 npm test
 ```
+#### 3. The project is automated using Github Actions to perform a GKE deployment on GCP. The deployment.yaml and service.yaml specify the initial image tags.
+
+#### 4. The deployment workflow is triggered on workflow-dispatch instruction. In this case, just for example, I have included the tag as input parameter. This can be configured to use tag/environment or other variables.
+
+### Exercise output
+
+#### 1. The project is deployed on GKE cluster on GCP.
+
+![img.png](resources/img.png)
+
+#### 2. The deployed pod can be accessed using the load balancers ip address
+
+```
+http://34.138.109.184:8081/
+```
+
+#### 3. The output displayed in the browser contains the most frequently used words and the number in brackets show the count.
+
+```
+
+Example: ["I(1649)","him(881)","so(779)","(621)","whale(590)","now(537)"]
+
+```
