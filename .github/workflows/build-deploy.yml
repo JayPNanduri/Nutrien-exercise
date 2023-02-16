@@ -72,3 +72,10 @@ jobs:
           ./kustomize build . | kubectl apply -f -
           kubectl rollout status deployment/$DEPLOYMENT_NAME
           kubectl get services -o wide
+        env:
+          PROJECT_ID: ${{ env.PROJECT_ID }}
+          GKE_ZONE: ${{ env.GKE_ZONE }}
+          REPO: ${{ env.REPO }}
+          IMAGE: ${{ env.IMAGE }}
+          TAG: $GITHUB_SHA
+          DEPLOYMENT_NAME: ${{ env.DEPLOYMENT_NAME }}
