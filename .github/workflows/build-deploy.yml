@@ -13,7 +13,8 @@ env:
   GKE_CLUSTER: nutrien-gke   # Add your cluster name here.
   GKE_ZONE: us-east1   # Add your cluster zone here.
   REPO: nutrien-artifacts-repo
-  IMAGE: nutrien-gke:${{ github.event.inputs.tag }}
+  TAG: ${{ github.event.inputs.tag }}
+  IMAGE: nutrien-gke
   DEPLOYMENT_NAME: nutrien-exercise
 
 jobs:
