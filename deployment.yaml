@@ -15,22 +15,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: $PROJECT
+  name: nutrien-exercise
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: $PROJECT
+      app: nutrien-exercise
   template:
     metadata:
       labels:
-        app: $PROJECT
+        app: nutrien-exercise
     spec:
       containers:
         - name: nutrien-gke
           # Replace $LOCATION with your Artifact Registry location (e.g., us-west1).
           # Replace $GCLOUD_PROJECT with your project ID.
-          image:  $GKE_ZONE-docker.pkg.dev/$PROJECT/$REPO/$IMAGE
+          image:  us-east1-docker.pkg.dev/nutrien-exercise/nutrien-artifacts-repo/nutrien-gke:latest
           # This app listens on port 8080 for web traffic by default.
           ports:
             - containerPort: 8081
