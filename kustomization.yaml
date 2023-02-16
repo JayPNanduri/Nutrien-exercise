@@ -4,8 +4,3 @@ kind: Kustomization
 
 resources:
   - ./deployment.yaml
-
-images:
-  - name: gcr.io/nutrien-exercise/nutrien-artifacts-repo/nutrien-gke
-    newName: gcr.io/nutrien-exercise/nutrien-artifacts-repo/nutrien-gke
-    newTag: ${TAG}
